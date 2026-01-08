@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayari Haven - Beautiful Poetry Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="text-white">
+    <header class="text-center py-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-center mb-6">
+                <img src="/sadd.png" alt="Artistic illustration of an open book with poetic verses flowing like ribbons in a tranquil garden setting under a starry night sky, in soft watercolor style with shades of blue and gold" class="rounded-lg shadow-lg" onerror="this.style.display='none';">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow fade-in">शायरी का संसार</h1>
+            <p class="text-lg md:text-xl fade-in" style="background-color: aliceblue; color: black;">दिल की गहराईयों से निकली हुई सुंदर शायरी का संग्रह। अपनी पसंद की शायरी पढ़ें और मन को छुएं।</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 pb-10">
+        <div class="text-center mb-8">
+            <button id="nextBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out">अगली शायरी देखें</button>
+        </div>
+        <div id="poemContainer" class="poem-card bg-white text-gray-800 p-6 md:p-8 rounded-lg mx-auto fade-in">
+            <p id="poemText" class="text-lg md:text-xl text-center leading-relaxed italic font-serif">किसी दिन सब कुछ बिखर जाएगा,<br>तू भी, मैं भी, ये शहर भी,<br>पर नाम तेरा दिल से निकालना आसान नहीं होगा,<br>मैंने तो इसे अपने दिल पर उंकया है।</p>
+           <p class="author text-sm text-gray-600 mt-4 text-right"></p>
+
+        </div>
+        <div class="text-center mt-8" style="background-color:white; color: black;">
+                 <h1> 
+                  I am on instagram, Facebook <br>
+                  and Snapchat,you can see them <br>
+                  all, my profile is given below<br>
+                  <a href="https://www.instagram.com/amityadavp526/" target="_main"><u>@instagram</u></a> <a href="https://www.facebook.com/share/1KupGyrbh3/" target="_main"><u>@Facebook</u></a> <a href="https://www.snapchat.com/add/amiyadavp167?share_id=uCgoByx9c-Q&locale=en-US" target="_main"><u>@Snapchat</u></a><br>
+                 </h1>
+         </div>
+                  
+           
+        
+    </main>
+
+    <footer class="text-center py-6 bg-black bg-opacity-20 mt-10" style="background-color: rgb(12, 241, 203); color: black;">
+        <p class="text-sm">&copy; 2026 Shayari Haven. सभी शायरी सिर्फ मनोरंजन के लिए।</p>
+        <p class="mt-2">संदेश: शायरी हर दिल की धड़कन है - इसे मन से पढ़ें।</p>
+        <P class="text-center">If you have any problem, you can contact here. Thank you.<br>
+        <a href="https://www.instagram.com/amityadavp526/" target="_main"><u>@instagram</u></a> <a href="https://www.facebook.com/share/1KupGyrbh3/" target="_main"><u>@Facebook</u></a> <a href="https://www.snapchat.com/add/amiyadavp167?share_id=uCgoByx9c-Q&locale=en-US" target="_main"><u>@Snapchat</u></a></P>
+    </footer>
+<script>        
+    const shayariList =[
+            { text: "किसी दिन सब कुछ बिखर जाएगा,<br>तू भी, मैं भी, ये शहर भी,<br>पर नाम तेरा दिल से निकालना आसान नहीं होगा,<br>मैंने तो इसे अपने दिल पर उंकया है।", author: "राजेश पांडे" },
+            { text: "मरहम तब लगाएँ जब चोट हो,<br>चोट लगाने के लिए तो तलवार ढूंढती थीं,<br>पर जब मैं तुम्हें भूलना चाहता,<br>तो यादें दुनिया की सबसे गहरी नदी बन जातीं।", author: "मुनीर नीकर" },
+            { text: "कटी रात की तरह, बिताया दिन,<br>फूलों से भरी है उनकी राहें,<br>पर मैं सच्चा था, अब भी सच्चा हूँ,<br>उनके दिल में कितने रिश्ते हों? नहीं मालूम।", author: "मिर्जा गालिब" },
+            { text: "दोस्ती कितना खूबसूरत रिश्ता है,<br>जिसमें न कोई स्वार्थ होता,<br>न कोई शर्त लगी होती,<br>सिर्फ दिल बोलता रहता है।", author: "अनाम" },
+            { text: "हर मोड़ पर एक कहानी छुपी है,<br>हर आईने में एक जवानी छुपी है,<br>तूने तो अपना ऐना दुर्लीया कर समझा,<br>मैंने उसे दिल से लगा रखा है।", author: "जावेद अख्तर" },
+            { text: "कभी जो हम पर जान छिड़कते थे,<br>आज वही हमें जान के अनजान करते हैं।" , author: "अज्ञात"}, 
+            { text: "हम चुप हैं इसका मतलब ये नहीं कि दर्द नहीं,<br>बस सहने की आदत पड़ गई है।",author: "गुलज़ार"},
+            { text: "किसी दिन सब कुछ बिखर जाएगा,<br>तू भी, मैं भी, ये शहर भी,<br>पर नाम तेरा दिल से निकालना आसान नहीं होगा,<br>मैंने तो इसे अपने दिल पर उंकया है।", author: "राजेश पांडे" },
+            { text: "मरहम तब लगाएँ जब चोट हो,<br>चोट लगाने के लिए तो तलवार ढूंढती थीं,<br>पर जब मैं तुम्हें भूलना चाहता,<br>तो यादें सबसे गहरी नदी बन जातीं।", author: "मुनीर नीकर" },
+            { text: "हम चुप हैं इसका मतलब ये नहीं कि दर्द नहीं,<br>बस सहने की आदत पड़ गई है।", author: "गुलज़ार" },
+            { text: "कभी जो अपना कहा करते थे,<br>आज वही अनजान बन बैठे हैं।", author: "अज्ञात" },
+            { text: "टूटे हुए दिल से मुस्कुराना पड़ता है,<br>लोग सवाल बहुत करते हैं।", author: "अनाम" },
+            { text: "हमने छोड़ा नहीं था किसी को,<br>बस जिसने छोड़ना था, उसने छोड़ दिया।", author: "अज्ञात" },
+            { text: "कुछ लोग जान बन जाते हैं,<br>और फिर अनजान बनकर चले जाते हैं।", author: "अनाम" },
+            { text: "जिसे टूट कर चाहा था,<br>उसी ने सबसे ज्यादा तोड़ा।", author: "अज्ञात" },
+            { text: "हमारे सब्र की भी एक हद थी,<br>तूने वो भी पार कर दी।", author: "अनाम" },
+            { text: "आज भी तेरा नाम सुनकर,<br>दिल थम सा जाता है।", author: "अज्ञात" },
+            { text: "खामोशी सबसे बड़ा दर्द है,<br>जो कहा नहीं जाता।", author: "गुलज़ार" },
+            { text: "हम वो किताब हैं,<br>जिसे सबने पढ़ा पर समझा नहीं।", author: "अनाम" },
+            { text: "जिनसे उम्मीद थी वही तोड़ गए,<br>बाकी क्या ही करते।", author: "अज्ञात" },
+            { text: "कभी हम भी खास हुआ करते थे,<br>अब बस याद हैं।", author: "अनाम" },
+            { text: "दिल को आदत हो गई है टूटने की,<br>अब दर्द भी अपना सा लगता है।", author: "अज्ञात" },
+            { text: "हमने वक़्त को नहीं बदला,<br>वक़्त ने हमें बदल दिया।", author: "अनाम" },
+            { text: "जिसे दिल में बसाया था,<br>उसी ने दिल खाली कर दिया।", author: "अज्ञात" },
+            { text: "तन्हाई ने सिखा दिया,<br>खुद से बात करना।", author: "अनाम" },
+            { text: "कुछ रिश्ते अधूरे ही अच्छे होते हैं,<br>पूरा होने पर टूट जाते हैं।", author: "अज्ञात" },
+            { text: "हम आज भी तेरे हैं,<br>बस तुझे खबर नहीं।", author: "अनाम" },
+            { text: "कभी मुस्कान थी चेहरे पर,<br>आज बस खामोशी है।", author: "अज्ञात" },
+            { text: "जिनसे बात करने की आदत थी,<br>आज उनसे खामोशी है।", author: "अनाम" },
+            { text: "दिल की हालत किसी से कहें भी तो कैसे,<br>हर कोई मजाक बना देता है।", author: "अज्ञात" },
+            { text: "तू दूर है फिर भी दिल के पास है,<br>यही सबसे बड़ा दर्द है।", author: "अज्ञात" },
+            { text: "हमने चाहा था उम्र भर,<br>उन्होंने चाहा कुछ पल।", author: "अनाम" },
+            { text: "कुछ यादें आज भी रुला देती हैं,<br>चाहे वक्त कितना भी बीत जाए।", author: "अज्ञात" },
+            { text: "दिल से उतारना आसान नहीं होता,<br>जो रूह में उतर जाए।", author: "अनाम" },
+            { text: "हम आज भी उसी मोड़ पर खड़े हैं,<br>जहाँ तूने छोड़ा था।", author: "अज्ञात" },
+            { text: "खुद को मजबूत दिखाते रहे,<br>अंदर से रोज टूटते रहे।", author: "अनाम" },
+            { text: "तन्हाई में जो सुकून है,<br>वो भी अब दर्द देने लगा है।", author: "अज्ञात" },
+            { text: "हमने कुछ नहीं माँगा,<br>बस साथ चाहा था।", author: "अनाम" },
+            { text: "दिल की सुनता तो टूटता नहीं,<br>पर आदत नहीं थी।", author: "अज्ञात" },
+            { text: "कुछ लोग सिखाने आते हैं,<br>कि भरोसा नहीं करना चाहिए।", author: "अनाम" },
+            { text: "हम आज भी इंतज़ार करते हैं,<br>शायद वो लौट आए।", author: "अज्ञात" },
+            { text: "तू याद नहीं करता,<br>और हम भुला नहीं पाते।", author: "अनाम" },
+            { text: "हर मुस्कान के पीछे,<br>एक कहानी छुपी होती है।", author: "अज्ञात" },
+            { text: "दिल की आवाज़ को दबा लिया,<br>लोगों की खातिर।", author: "अनाम" },
+            { text: "हमने खोया बहुत कुछ,<br>बस शिकायत नहीं की।", author: "अज्ञात" },
+            { text: "अकेले रहना सीख लिया है,<br>अब किसी की जरूरत नहीं।", author: "अनाम" }
+        ];
+        let currentIndex = 0;
+        const poemText = document.getElementById('poemText');
+        const poemAuthor = document.querySelector('.author');
+
+        // const poemAuthor = document.getElementById('author');
+        const nextBtn = document.getElementById('nextBtn');
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % shayariList.length;
+            const currentShayari = shayariList[currentIndex];
+            poemText.innerHTML = currentShayari.text;
+            poemAuthor.textContent = '- ' + currentShayari.author;
+            poemText.style.animation = 'none';
+            void poemText.offsetWidth; // Trigger reflow
+            poemText.style.animation = 'fadeIn 0.6s ease-out';
+        });
+
+        // Auto-rotate every 10 seconds
+        setInterval(() => {
+            nextBtn.click();
+        }, 10000);
+
+
+    </script>
+
+</body>
+</html>
+</content>
+</create_file>
