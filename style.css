@@ -22,11 +22,12 @@
             animation: fadeIn 0.6s ease-out;
         }
         body{
-             background-image: url('sadh.png.jpeg');
+             background-image: url('sdh.png');
              background-size: cover;       
              background-repeat: no-repeat; 
              background-position: center; 
         }
+
 
 
 
